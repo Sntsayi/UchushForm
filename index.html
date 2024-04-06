@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,149 @@
     <title>UchushForm</title>
   </head>
   <body>
+    <div class="container">
+      <form class="form">
+        <div class="field">
+          <label for="">
+            نام
+            <sup style="font-size: 1.8rem; font-weight: bolder; color: red"
+              >*</sup
+            >
+            :
+          </label>
+          <input type="text" required />
+        </div>
+
+        <div class="field">
+          <label for=""
+            >نام خانوادگی
+            <sup style="font-size: 1.8rem; font-weight: bolder; color: red"
+              >*</sup
+            >
+            :</label
+          >
+          <input type="text" required />
+        </div>
+
+        <div class="field">
+          <label for=""
+            >تلفن
+            <sup style="font-size: 1.8rem; font-weight: bolder; color: red"
+              >*</sup
+            >
+            :</label
+          >
+          <input
+            type="text"
+            style="text-align: left"
+            required
+            autocomplete="on"
+          />
+        </div>
+
+        <div class="field">
+          <label for=""
+            >ایمیل
+            <sup style="font-size: 1.8rem; font-weight: bolder; color: red"
+              >*</sup
+            >
+            :</label
+          >
+          <input type="email" style="text-align: left" required />
+        </div>
+
+        <div class="field">
+          <label for=""
+            >نوع ارز
+            <sup style="font-size: 1.8rem; font-weight: bolder; color: red"
+              >*</sup
+            >
+            : (انتخاب کنید)
+          </label>
+          <select id="exchanges" value="255" name="exchange">
+            <option value="255">دلار</option>
+            <option value="298">یورو</option>
+            <option value="100">یوان</option>
+            <option value="99">لیر</option>
+            <option value="154">مانات</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for=""
+            >کشور مقصد
+            <sup style="font-size: 1.8rem; font-weight: bolder; color: red"
+              >*</sup
+            >
+            : (انتخاب کنید)
+          </label>
+          <select id="countries" value="emarat" name="exchangeCountry">
+            <option value="turkish">ترکیه</option>
+            <option value="emarat">امارات</option>
+            <option value="azerbaijan">آذربایجان</option>
+            <option value="canada">کانادا</option>
+            <option value="china">چین</option>
+          </select>
+        </div>
+
+        <div class="field six">
+          <label for=""
+            >نام صاحب حساب به انگلیسی
+            <sup style="font-size: 1.8rem; font-weight: bolder; color: red"
+              >*</sup
+            >
+            :</label
+          >
+          <input type="text" style="text-align: left" required />
+        </div>
+
+        <div class="field">
+          <label for=""
+            >نام بانک(انگلیسی)
+            <sup style="font-size: 1.8rem; font-weight: bolder; color: red"
+              >*</sup
+            >
+            :</label
+          >
+          <input type="text" style="text-align: left" required />
+        </div>
+
+        <div class="field">
+          <label for=""
+            >ایبان/شماره حساب/شماره کارت
+            <sup style="font-size: 1.8rem; font-weight: bolder; color: red"
+              >*</sup
+            >
+            :</label
+          >
+          <input type="text" style="text-align: left" required />
+        </div>
+
+        <!-- space of img <= 3 MB -->
+        <div class="field nine">
+          <label for="recept"
+            >عکس رسید
+            <sup style="font-size: 1.8rem; font-weight: bolder; color: red"
+              >*</sup
+            >
+            :</label
+          >
+          <div>
+            <input type="file" id="recept" name="imgRecept" />
+            <span id="errorMessage">فایل حجمی شما بیش از 3 مگابایت است .</span>
+          </div>
+        </div>
+
+        <div class="field eleven">
+          <input type="checkbox" name="checkbox" id="" />
+          <label for="">تمامی قوانین و شرایط اوچوش را میپذیرم.</label>
+        </div>
+        <div class="field ten">
+          <!-- <button id="submitBtn" type="submit">ارسال</button> -->
+          <input id="submitBtn" type="submit" value="ارسال" disabled />
+        </div>
+      </form>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>

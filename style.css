@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: burlywood;
+  padding: 3rem;
+
+  font-size: 1.5rem;
+}
+
+.form {
+  background-color: white;
+  padding: 1.5rem;
+  padding-bottom: 2.5rem;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1rem;
+  column-gap: 1.6rem;
+  grid-auto-rows: minmax(6rem, auto);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+  font-size: 1.7rem;
+}
+.field input,
+.field select {
+  padding: 0.9rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 0.1rem solid black;
+  background-color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.ten input {
+  width: 10rem;
+  display: inline-block;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  background-color: #2b8ccc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+.field select option {
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+}
+.form .six,
+.form .nine,
+.form .ten {
+  grid-column: 2 span;
+}
+.form .nine input {
+  border-color: black;
+}
+
+.eleven {
+  margin-top: 2rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+.eleven input {
+  width: 2rem;
+  height: 2rem;
+  font-weight: bolder;
+}
+
+#errorMessage {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: red;
+  display: none;
+}
+
+/* responsive */
+
+@media (max-width: 680px) {
+  body {
+    padding: 1rem;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .ten input {
+    width: 100%;
+  }
+}
