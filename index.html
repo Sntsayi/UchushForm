@@ -17,7 +17,7 @@
             >
             :
           </label>
-          <input type="text" required />
+          <input type="text" id="fName" required />
         </div>
 
         <div class="field">
@@ -28,7 +28,7 @@
             >
             :</label
           >
-          <input type="text" required />
+          <input type="text" id="lName" required />
         </div>
 
         <div class="field">
@@ -41,6 +41,7 @@
           >
           <input
             type="text"
+            id="phoneNum"
             style="text-align: left"
             required
             autocomplete="on"
@@ -55,7 +56,12 @@
             >
             :</label
           >
-          <input type="email" style="text-align: left" required />
+          <input
+            type="email"
+            id="emailAddr"
+            style="text-align: left"
+            required
+          />
         </div>
 
         <div class="field">
@@ -100,7 +106,12 @@
             >
             :</label
           >
-          <input type="text" style="text-align: left" required />
+          <input
+            type="text"
+            id="userEnName"
+            style="text-align: left"
+            required
+          />
         </div>
 
         <div class="field">
@@ -111,7 +122,7 @@
             >
             :</label
           >
-          <input type="text" style="text-align: left" required />
+          <input type="text" id="bankName" style="text-align: left" required />
         </div>
 
         <div class="field">
@@ -122,7 +133,7 @@
             >
             :</label
           >
-          <input type="text" style="text-align: left" required />
+          <input type="text" id="cardNum" style="text-align: left" required />
         </div>
 
         <!-- space of img <= 3 MB -->
@@ -150,6 +161,7 @@
         </div>
       </form>
     </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
