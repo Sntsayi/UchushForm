@@ -106,4 +106,7 @@ body {
   .ten input {
     width: 100%;
   }
+  .form .nine input {
+    width: 100%;
+  }
 }

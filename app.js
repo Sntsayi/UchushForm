@@ -75,8 +75,32 @@ submitBtn.addEventListener("click", (e) => {
       emailjs.send("service_zzmgmwe", "template_ayhs2ek", parameters).then(
         function (response) {
           console.log("Email sent successfully:", response);
-          document.location = `https://ex.uchush.com/?add-to-cart=${exchanges.value}&quantity=1`;
-          alert("Email sent successfully!");
+          // alert to show the email was sent successfully
+          let timerInterval;
+          Swal.fire({
+            title: "عملیات با موفقیت انجام شد.",
+            text: "در حال منقل شدن به بخش پرداخت هستید.",
+            icon: "success",
+            timer: 3000,
+            timerProgressBar: true,
+
+            didOpen: () => {
+              Swal.showLoading();
+              timerInterval = setInterval(() => {
+                console.log(swal.getTimerLeft());
+              }, 100);
+            },
+            willClose: () => {
+              clearInterval(timerInterval);
+              document.location = `https://ex.uchush.com/?add-to-cart=${exchanges.value}&quantity=1`;
+            },
+          }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+              console.log("I was closed by the timer");
+            }
+          });
+          // alert to show the email was sent successfully
         },
         function (error) {
           console.error("Email sending failed:", error);
