@@ -72,7 +72,7 @@ submitBtn.addEventListener("click", (e) => {
         recetionImg: imgRecept.value,
       };
       // Replace 'your_service_id' and 'your_template_id' with actual IDs
-      emailjs.send("service_zzmgmwe", "template_ayhs2ek", parameters).then(
+      emailjs.send("service_wc0jdhi", "template_ayhs2ek", parameters).then(
         function (response) {
           console.log("Email sent successfully:", response);
           // alert to show the email was sent successfully
